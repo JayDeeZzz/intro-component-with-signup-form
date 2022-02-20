@@ -1,0 +1,168 @@
+:root{
+     --red: hsl(0, 100%, 74%);
+     --green: hsl(154, 59%, 51%);
+     --darkgreen: hsl(154, 50%, 41%);
+     --blue: hsl(248, 32%, 49%);
+     --darkblue: hsl(249, 10%, 26%);
+     --blueshadow: hsla(249, 10%, 26%, 0.3);
+     --grayishblue: hsl(246, 25%, 77%);
+     --bfont: 'Poppins', sans-serif;
+}
+ html{
+     box-sizing: border-box;
+}
+ *, *:before, *:after {
+     box-sizing: inherit;
+}
+ html,body{
+     height: 100vh;
+     font-family: var(--bfont);
+}
+ body{
+     background: url('../images/bg-intro-desktop.png');
+     background-size: cover;
+     background-color: var(--red);
+}
+ a{
+     color: var(--red);
+     font-weight: 600;
+     text-decoration: none;
+}
+ small{
+     color: var(--grayishblue);
+}
+ h1{
+     line-height: 1.3em;
+     font-size: 3em;
+     font-weight: 700;
+     margin-bottom: 0;
+}
+ input, button, .msgbox{
+     border-radius: 0.5em;
+     padding: 1.5em;
+     margin-bottom: 2em;
+     width: 100%;
+     font-family: var(--bfont);
+}
+ input{
+     font-weight: 500;
+     border: 1px solid var(--grayishblue);
+}
+ input:focus{
+     outline: none;
+     border: 1px solid var(--blue)!important;
+     color: var(--darkblue);
+     font-weight: 600;
+}
+ button, .msgbox{
+     color: #fff;
+     font-weight: 700;
+}
+ button{
+     padding: 1em;
+     background: var(--green);
+     margin-bottom: 1em;
+     border: 0;
+     box-shadow: var(--darkgreen) 0px 5px 0px;
+     font-family: var(--bfont);
+     text-transform: uppercase;
+     font-size: 1em;
+     cursor: pointer;
+     border: 1px solid var(--darkgreen);
+     letter-spacing: 0.1em;
+}
+ button:hover{
+     opacity: 0.7;
+}
+ main{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     flex-direction: column;
+}
+ section{
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     max-width: 1200px;
+     margin-bottom: 2em;
+}
+ label{
+     display: block;
+     width: 100%;
+     text-align: right!important;
+     color: var(--red);
+     font-style: italic;
+     font-size: 0.8em;
+     top: -1.5em;
+     position: relative;
+     display: none;
+}
+ label img{
+     position: absolute;
+     right: 2em;
+     top: -4em;
+}
+ #left, #right{
+     width: 50%;
+}
+ #left{
+     color: #fff;
+     padding: 2em;
+}
+ #right{
+     text-align: center;
+}
+ .msgbox{
+     background: var(--blue);
+     padding: 1em;
+     box-shadow: var(--blueshadow) 0px 7px 0px;
+}
+ .msgbox span{
+     font-weight: 400;
+}
+ .content{
+     padding: 2em;
+     background: #fff;
+     border-radius: 0.8em;
+}
+ footer{
+}
+ .attribution {
+     font-size: 11px;
+     text-align: center;
+}
+ .attribution a {
+     color: hsl(228, 45%, 44%);
+}
+ @media (max-width:769px){
+     body{
+         background: url('../images/bg-intro-mobile.png');
+         background-color: var(--red);
+    }
+     main{
+         height: auto;
+    }
+     h1{
+         font-size: 2em;
+    }
+     button{
+         font-size: 0.9em;
+    }
+     section{
+         padding:1em;
+         flex-direction: column;
+         width: 100%;
+    }
+     #left, #right{
+         width: 100%;
+    }
+     #left{
+         text-align: center;
+         padding: 2em 0;
+    }
+     #right{
+         margin-bottom: 2em;
+    }
+}
